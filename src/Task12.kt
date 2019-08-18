@@ -3,17 +3,16 @@
 
 fun main(args: Array<String>) {
     println("Введите год")
-    try {
-        val year = readLine().toString().toInt()
-        if (isLeapYear(year))
-            println("$year - високосный год")
-        else
-            println("$year - обычный год")
+    val year = try {
+        readLine().toString().toInt()
     } catch (e: NumberFormatException) {
         println("Вы ввели не число")
+        return
     }
+    if (isLeapYear(year))
+        println("$year - високосный год")
+    else
+        println("$year - обычный год")
 }
 
-fun isLeapYear(year: Int): Boolean {
-    return !((year % 4 != 0) || (year % 100 == 0) and (year % 400 != 0))
-}
+fun isLeapYear(year: Int) = !((year % 4 != 0) || (year % 100 == 0) && (year % 400 != 0))

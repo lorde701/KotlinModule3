@@ -6,6 +6,4 @@ fun main(args: Array<String>) {
     println(d.root())
 }
 
-fun Double.root(): Double {
-    return Math.sqrt(this)
-}
+fun Double.root() = Math.sqrt(this)

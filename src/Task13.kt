@@ -1,5 +1,6 @@
 //Задание 13: Количество сотрудников
-//Напишите функцию, принимающую на вход имена сотрудников и возвращающую их количество. Используйте для этого vararg, из предыдущей темы.
+//Напишите функцию, принимающую на вход имена сотрудников и возвращающую их количество.
+// Используйте для этого vararg, из предыдущей темы.
 
 fun main(args: Array<String>) {
     val employees = arrayOf("Первый", "Второй", "Третий", "Четвертый", "Пятый", "Шестой")
@@ -8,6 +9,4 @@ fun main(args: Array<String>) {
     println("\nКоличество сотрудников: " + numberEmployees(*employees))
 }
 
-fun numberEmployees(vararg employees: String): Int {
-    return employees.size
-}
+fun numberEmployees(vararg employees: String) = employees.size
